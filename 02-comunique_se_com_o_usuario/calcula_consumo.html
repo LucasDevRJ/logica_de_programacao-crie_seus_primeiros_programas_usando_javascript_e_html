@@ -8,7 +8,13 @@
 	var caminhoComAlcool = 300;
 	var consumoGasolina = caminhoComGasolina / tanque;
 	var consumoDeAlcool = caminhoComAlcool / tanque;
+	var precoDaGasolina = 2.90;
+	var precoDoAlcool = 2.40;
+	var precoPorKilometroGasolina = precoDaGasolina / consumoGasolina;
+	var precoPorKilometroAlcool = precoDoAlcool / consumoDeAlcool;
 	
 	document.write("O consumo da gasolina foi de " + consumoGasolina.toFixed(2) + " litros.");
 	document.write("<br>O consumo da álcool foi de " + consumoDeAlcool.toFixed(2) + " litros.");
+	document.write("<br>Preço por kilometro da gasolina é R$ " + precoPorKilometroGasolina.toFixed(2));
+	document.write("<br>Preço por kilometro do álcool é R$ " + precoPorKilometroAlcool.toFixed(2));
 </script>
