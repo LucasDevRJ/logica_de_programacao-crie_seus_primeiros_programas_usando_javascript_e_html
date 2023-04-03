@@ -9,7 +9,7 @@
 	}
 	
 	function calculaImc(altura, peso) {
-		var imc = peso / (altura * altura);
+		var imc = Math.round(peso / (altura * altura));
 		return imc;
 	}
 	
@@ -17,9 +17,9 @@
 	var altura = 1.72;
 	var imc = calculaImc(altura, peso);
 	
-	mostra("O IMC calculado é " + imc.toFixed(2));
-	mostra("Ainda estou " + (imc - 18.5).toFixed(2) + " pontos acima do limite da magreza.");
-	mostra("Estou " + (imc - 35.0).toFixed(2) + " pontos distantes da obesidade severa.");
+	mostra("O IMC calculado é " + imc);
+	mostra("Ainda estou " + (imc - 18.5) + " pontos acima do limite da magreza.");
+	mostra("Estou " + (imc - 35.0) + " pontos distantes da obesidade severa.");
 	
 	pulaLinha();
 	
@@ -27,6 +27,6 @@
 	var alturaDoPrimo = 1.76;
 	var imcDoPrimo = calculaImc(alturaDoPrimo, pesoDoPrimo);
 	
-	mostra("O IMC do primo é " + imcDoPrimo.toFixed(2));
-	mostra("Ele ainda está " + (imcDoPrimo - 18.5).toFixed(2) + " pontos acima do limite da magreza.");
+	mostra("O IMC do primo é " + imcDoPrimo);
+	mostra("Ele ainda está " + (imcDoPrimo - 18.5) + " pontos acima do limite da magreza.");
 </script>
