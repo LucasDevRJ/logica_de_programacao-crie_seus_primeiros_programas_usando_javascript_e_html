@@ -13,8 +13,9 @@
 		return imc;
 	}
 	
-	var alturaDoUsuario = prompt("Bom dia! Qual é sua altura? ");
-	var pesoDoUsuario = prompt("E o seu peso? ");
+	var nome = prompt("Bom dia! Qual é o seu nome? ");
+	var alturaDoUsuario = prompt(nome + ", qual é sua altura? ");
+	var pesoDoUsuario = prompt("e " + nome + " qual é o seu peso? ");
 	
 	var imcDoUsuario = calculaImc(alturaDoUsuario, pesoDoUsuario);
 	
