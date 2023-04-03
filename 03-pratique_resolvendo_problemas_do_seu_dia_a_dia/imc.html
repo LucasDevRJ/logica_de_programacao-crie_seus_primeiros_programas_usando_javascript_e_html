@@ -15,11 +15,14 @@
 	
 	var peso = 75;
 	var altura = 1.72;
+	var imc = calculaImc(altura, peso);
+	
+	mostra("O IMC calculado é " + imc);
 	
 	var pesoDoPrimo = 83;
 	var alturaDoPrimo = 1.76;
+	var imcDoPrimo = calculaImc(alturaDoPrimo, pesoDoPrimo);
 	
-	calculaImc(altura, peso);
-	calculaImc(alturaDoPrimo, pesoDoPrimo);
-	
+	mostra("O IMC do primo é " + imcDoPrimo);
+	mostra("Ele ainda está " + (imcDoPrimo - 18.5) + " pontos acima do limite da magreza.");
 </script>
