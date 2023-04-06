@@ -8,10 +8,9 @@
 		pulaLinha();
 	}
 	
-	var vitorias = 3;
-	var empates = "1";
-	empates = parseInt(empates);
-	var pontos = vitorias * 3 + empates;
+	var vitorias = parseInt(prompt("Quantos jogos o CDC FC venceu? "));
+	var empates = parseInt(prompt("Quantos jogos o CDC FC empatou? "));
+	var pontos = (vitorias * 3) + empates;
 	
-	alert(pontos);
+	mostra("Nosso time tem " + pontos + " pontos!");
 </script>
