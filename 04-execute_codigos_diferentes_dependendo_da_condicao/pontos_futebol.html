@@ -10,23 +10,24 @@
 	
 	var vitoriasCDC = parseInt(prompt("Quantos jogos o CDC FC venceu? "));
 	var empatesCDC = parseInt(prompt("Quantos jogos o CDC FC empatou? "));
-	var pontosCDC = (vitorias * 3) + empates;
+	var pontosCDC = (vitoriasCDC * 3) + empatesCDC;
 	
 	var vitoriasLivrosVelhos = parseInt(prompt("Quantos jogos o Livros Velhos venceu? "));
 	var empatesLivrosVelhos = parseInt(prompt("Quantos jogos o Livros Velhos empatou? "));
 	var pontosLivrosVelhos = (vitoriasLivrosVelhos * 3) + empatesLivrosVelhos;
 	
-	mostra("Nosso time tem " + pontos + " pontos!");
+	mostra("Nosso time tem " + pontosCDC + " pontos!");
+	mostra("Livros Velhos tem " + pontosLivrosVelhos + " pontos!");
 	
-	if (pontos > 28) {
+	if (pontosCDC > pontosLivrosVelhos) {
 		mostra("Nosso time está indo MELHOR que o Livros Velhos!");
 	}
 	
-	if (pontos < 28) {
+	if (pontosCDC < pontosLivrosVelhos) {
 		mostra("Nosso time está indo PIOR que o Livros Velhos!");
 	}
 	
-	if (pontos == 28) {
+	if (pontosCDC == pontosLivrosVelhos) {
 		mostra("Nosso time está EMPATADO com o Livros Velhos!");
 	}
 </script>
