@@ -8,17 +8,19 @@
 		pulaLinha();
 	}
 	
-	function calculaPontos(vitorias, empates) {
-		return (vitorias * 3) + empates;
+	function calculaPontos(vitorias, empates, derrotas) {
+		return ((vitorias * 3) + empates) - derrotas;
 	}
 	
 	var vitoriasCDC = parseInt(prompt("Quantos jogos o CDC FC venceu? "));
 	var empatesCDC = parseInt(prompt("Quantos jogos o CDC FC empatou? "));
-	var pontosCDC = calculaPontos(vitoriasCDC, empatesCDC);
+	var derrotasCDC = parseInt(prompt("Quantos jogos o CDC FC perdeu? "));
+	var pontosCDC = calculaPontos(vitoriasCDC, empatesCDC, derrotasCDC);
 	
 	var vitoriasLivrosVelhos = parseInt(prompt("Quantos jogos o Livros Velhos venceu? "));
 	var empatesLivrosVelhos = parseInt(prompt("Quantos jogos o Livros Velhos empatou? "));
-	var pontosLivrosVelhos = calculaPontos(vitoriasLivrosVelhos, empatesLivrosVelhos);
+	var derrotasCDC = parseInt(prompt("Quantos jogos o Livros Velhos perdeu? "));
+	var pontosLivrosVelhos = calculaPontos(vitoriasLivrosVelhos, empatesLivrosVelhos, derrotasCDC);
 	
 	mostra("Nosso time tem " + pontosCDC + " pontos!");
 	mostra("Livros Velhos tem " + pontosLivrosVelhos + " pontos!");
