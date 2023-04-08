@@ -13,6 +13,14 @@
 	if (chute == numeroPensado) {
 		mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
 	} else {
-		mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+		if (chute > numeroPensado) {
+			mostra("Seu chute é maior que o número pensado.");
+			mostra("Número pensado é " + numeroPensado);
+		} else {
+			if (chute < numeroPensado) {
+				mostra("Seu chute é menor que o número pensado.");
+				mostra("Número pensado é " + numeroPensado);
+			}
+		}
 	}
 </script>
