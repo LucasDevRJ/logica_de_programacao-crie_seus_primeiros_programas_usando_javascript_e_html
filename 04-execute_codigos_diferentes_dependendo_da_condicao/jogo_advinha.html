@@ -15,6 +15,11 @@
 	var numeroPensado = sorteia(10);
 	
 	var chute = prompt("Já pensei. Qual você acha que é? ");
+	
+	if (isNaN(chute)) {
+		alert("Apenas números são válidos!");
+	}
+	
 	if (chute == numeroPensado) {
 		mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
 	} else {
