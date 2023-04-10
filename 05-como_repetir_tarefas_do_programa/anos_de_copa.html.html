@@ -1,8 +1,13 @@
 <script>
+	function mostra(frase) {
+		document.write(frase + "<br>");
+	}
 	var anoDeCopa = 1930;
 	
 	while (anoDeCopa <= 2014) {
-		alert(anoDeCopa + " tem copa!");
+		mostra(anoDeCopa + " tem copa!");
 		anoDeCopa = anoDeCopa + 4;
 	}
+	
+	mostra("Ufa! Esses foram os anos de copa até 2014.");
 </script>
