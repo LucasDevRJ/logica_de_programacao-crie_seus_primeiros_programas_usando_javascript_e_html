@@ -4,7 +4,9 @@
 	}
 	var anoDeCopa = 1930;
 	
-	while (anoDeCopa <= 100000) {
+	var anoLimite = parseInt(prompt("Qual é o ano limite?"));
+	
+	while (anoDeCopa <= anoLimite) {
 		mostra(anoDeCopa + " tem copa!");
 		anoDeCopa = anoDeCopa + 4;
 	}
