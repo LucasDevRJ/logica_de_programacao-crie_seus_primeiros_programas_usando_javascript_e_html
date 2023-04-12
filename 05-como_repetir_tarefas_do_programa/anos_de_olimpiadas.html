@@ -1,0 +1,17 @@
+<script>
+	function mostra(frase) {
+		document.write(frase + "<br>");
+	}
+	
+	var anoInicial = parseInt(prompt("Digite o ano inicial: "));
+	var anoLimite = parseInt(prompt("Digite o ano limite: "));
+	
+	var ano = anoInicial;
+	
+	while (ano <= anoLimite) {
+		if (ano >= 1896) {
+			mostra(ano + " tem olimpíadas!");
+		}
+		ano += 4;
+	}
+</script>
