@@ -5,10 +5,11 @@
 		document.write(frase + "<br>");
 	}
 	
-	var multiplicador = 1;
-	
-	while (multiplicador <= 10) {
-		mostra("7 x " + multiplicador + " = " + 7 * multiplicador);
-		multiplicador = multiplicador + 1;
+	var multiplicador = parseInt(prompt("Digite o número que deseja a tabuada: "));
+	var contador = 0;
+	while (contador <= 10) {
+		var conta = multiplicador * contador;
+		mostra(multiplicador + " x " + contador + " = " + conta);
+		contador = contador + 1;
 	}
 </script>
