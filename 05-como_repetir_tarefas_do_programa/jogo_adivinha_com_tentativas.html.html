@@ -1,21 +1,28 @@
 <script>
-	var numeroPensado = Math.round(Math.random() * 10);
-	var numeroDaTentativa = 1;
+	var numeroPensado = Math.round(Math.random() * 1000);
+	var acertou = 0;
 	
-	console.log(numeroPensado);
-	
-	while (true) {
+	while (true && acertou == 0) {
+		var acertou = false;
+		console.log(numeroPensado);
+		
 		var chute = prompt("Já pensei. Qual você acha que é? ");
+		
+		if (numeroPensado > chute) {
+			var diferenca = numeroPensado - chute;
+		} else if (numeroPensado < chute) {
+			var diferenca = chute - numeroPensado;
+		}
 		
 		if (chute > numeroPensado) {
 			alert("O número chutado é maior!");
+			alert("Faltam " + diferenca + " para chegar no número pensado!");
 		} else if (chute < numeroPensado) {
 			alert("O número chutado é menor!");
+			alert("Faltam " + diferenca + " para chegar no número pensado!");
 		} else {
 			alert("Parabéns, Você acertou!");
-			break;
+			acertou = 1;
 		}
-		
-		numeroDaTentativa++;
 	}
 </script>
