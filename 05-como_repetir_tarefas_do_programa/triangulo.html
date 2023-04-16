@@ -1,0 +1,14 @@
+<script>
+	function exibeTriangulo() {
+		for (var linha = 0; linha <= 9; linha++) {
+			for (var coluna = 0; coluna <= 9; coluna++) {
+				if (coluna < linha) {
+					document.write("*");
+				}
+			}
+			document.write("<br>");
+		} 
+	}
+	
+	exibeTriangulo();
+</script>
