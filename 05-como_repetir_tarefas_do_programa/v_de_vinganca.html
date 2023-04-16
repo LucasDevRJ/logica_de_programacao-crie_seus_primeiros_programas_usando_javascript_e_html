@@ -1,0 +1,21 @@
+<script>
+	function exibeVDeVinganca() {
+		for (var linha = 0; linha < 10; linha++) {	
+			for (var coluna = 0; coluna < 10; coluna++) {
+				if (coluna == linha) {
+					document.write("*");
+				} 
+				document.write("__");
+			}
+			for (var coluna = 10; coluna > 0; coluna--) {
+				if (coluna == linha) {
+					document.write("*");
+				} 
+				document.write("__");
+			}
+			document.write("<br>");
+		}
+	}
+	
+	exibeVDeVinganca();
+</script>
