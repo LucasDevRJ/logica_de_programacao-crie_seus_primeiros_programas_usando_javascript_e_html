@@ -1,7 +1,18 @@
 <input type="text" id="numero"/>
-<input type="submit" value="Compare com o meu segredo!" id="adivinhar"/>
+<input type="submit" value="Compare com o número que estou pensando!" id="adivinhar"/>
 
 <script>
+	var segredo = 8;
 	var caixaDoNumero = document.getElementById("numero");
-	alert(caixaDoNumero.value);
+	
+	function botaoClicado() {
+		if (segredo == caixaDoNumero.value) {
+			alert("Parabéns! Você acertou o número secreto");
+		} else {
+			alert("Infelizmente você errou!");
+		}
+	}
+	
+	var botaoAdivinhar = document.getElementById("adivinhar");
+	botaoAdivinhar.onclick = botaoClicado;
 </script>
