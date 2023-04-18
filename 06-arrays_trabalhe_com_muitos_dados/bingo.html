@@ -1,23 +1,47 @@
 <meta charset="UTF-8">
 
+Adicione 6 números (um de cada vez):
 <input type="text" id="numero"/>
 <input type="submit" value="Adicione e verifique no Bingo!" id="verificar"/>
 
 <script>
-	var sorteados = [];
+	var sorteados = [12, 27, 32, 54, 21, 6];
+	var numerosDigitados = [];
+	var acertos = 0;
+	var campoNumeroDigitado = document.getElementById("numero");
+	var verificouBingo = false;
 	
-	function adicionarSorteado() {
-		var numero = document.getElementById("numero").value;
-		for (var i = 0; i < sorteados.length; i = i + 1) {
-			if (sorteados[i] == numero) {
-				alert("Número já sorteado!");
-				return;
+	function adicionaNumerosDigitados() {
+		if (numerosDigitados.length != 6) {
+			var numeroDigitado = parseInt(campoNumeroDigitado.value);
+			if (isNaN(numeroDigitado) || numeroDigitado <= 0) {
+				alert("Valor inválido!");
+			} else {
+				numerosDigitados.push(numeroDigitado);
+				alert("Número adicionado!");
+				console.log(numerosDigitados);
+				campoNumeroDigitado.value = "";
+			}
+		} else {
+			verificaBingo();
+		}
+	}
+	
+	function verificaBingo() {
+		if (verificouBingo == false) {
+			for (var i = 0; i < sorteados.length; i++) {
+				for (var a = 0; a < sorteados.length; a++) {
+					if (sorteados[i] == numerosDigitados[a]) {
+						acertos++;
+						console.log("acertou!");
+					}
+				}
 			}
 		}
-		sorteados.push(numero);
-		console.log(sorteados);
+		verificouBingo = true;
+		alert("Você acertou " + acertos + " números!!");
 	}
 	
 	var botao = document.getElementById("verificar");
-	botao.onclick = adicionarSorteado;
+	botao.onclick = adicionaNumerosDigitados;
 </script>
