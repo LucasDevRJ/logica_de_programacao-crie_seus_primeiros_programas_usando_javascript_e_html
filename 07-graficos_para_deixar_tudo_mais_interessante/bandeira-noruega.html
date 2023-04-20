@@ -1,0 +1,24 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+	var tela = document.getElementById("tela");
+	var pincel = tela.getContext("2d");
+	
+	pincel.fillStyle = "red";
+	pincel.fillRect(0, 0, 600, 400);
+	
+	pincel.fillStyle = "white";
+	pincel.fillRect(150, 0, 100, 400);
+	
+	pincel.fillStyle = "blue";
+	pincel.fillRect(170, 0, 60, 400);
+	
+	pincel.fillStyle = "white";
+	pincel.fillRect(0, 150, 600, 100);
+	
+	pincel.fillStyle = "blue";
+	pincel.fillRect(170, 0, 60, 400);
+	
+	pincel.fillStyle = "blue";
+	pincel.fillRect(0, 170, 600, 60);
+</script>
