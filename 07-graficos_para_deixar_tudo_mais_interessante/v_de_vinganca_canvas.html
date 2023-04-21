@@ -1,0 +1,41 @@
+<canvas id="tela" width="800" height="400"></canvas>
+
+<script>
+	function desenhaLinhas(x, y) {
+		var tela = document.getElementById("tela");
+		var c = tela.getContext("2d");
+		
+		c.strokeStyle = "black";
+		c.strokeRect(x, y, 50, 10);
+	}
+	
+	function desenhaTrianguloBolas(x, y) {
+		var tela = document.getElementById("tela");
+		var c = tela.getContext("2d");
+		
+		c.fillStyle = "black";
+		c.beginPath();
+		c.arc(x, y, 25, 0, 2*3.14);
+		c.fill();
+	}
+	
+	for (var x = 0; x < 800; x = x + 50) {
+		for (var y = 0; y < 400; y = y + 50) {
+			if (x == y) {
+				desenhaTrianguloBolas(x+25, y+25);
+			} else {
+				desenhaLinhas(x, y);
+			}
+		}
+	}
+	
+	for (var x = 800; x > 0; x = x - 50) {
+		for (var y = 400; y > 0; y = y - 50) {
+			if (x == y) {
+				desenhaTrianguloBolas(x+25, y+25);
+			} else {
+				desenhaLinhas(x, y);
+			}
+		}
+	}
+</script>

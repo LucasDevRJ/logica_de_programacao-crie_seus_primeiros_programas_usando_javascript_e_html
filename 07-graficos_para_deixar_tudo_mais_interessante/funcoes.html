@@ -1,0 +1,16 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+	var tela = document.getElementById("tela");
+	var c = tela.getContext("2d");
+	
+	for (var x = 0; x < 600; x = x + 1) {
+		var y = x * x;
+		
+		console.log("Para x = ", + x + ", o y vale " + y);
+		
+		c.beginPath();
+		c.arc(x, y, 2, 0, 2*Math.PI);
+		c.fill();
+	}
+</script>
