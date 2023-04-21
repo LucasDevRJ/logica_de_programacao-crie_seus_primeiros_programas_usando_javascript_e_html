@@ -1,9 +1,16 @@
+<meta charset="UTF-8">
 <canvas id="tela" width="600" height="400"></canvas>
 
 <script>
+	function clicouNoCanvas() {
+		alert("Alguém clicou no canvas!");
+	}
+
 	var tela = document.getElementById("tela");
 	var c = tela.getContext("2d");
 	
 	c.fillStyle = "gray";
 	c.fillRect(0, 0, 600, 400);
+	
+	tela.onclick = clicouNoCanvas;
 </script>
