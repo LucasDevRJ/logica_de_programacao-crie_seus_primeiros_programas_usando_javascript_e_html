@@ -4,13 +4,19 @@
 	var tela = document.getElementById("tela");
 	var c = tela.getContext("2d");
 	
-	for (var x = 0; x < 600; x = x + 1) {
-		var y = x * x;
-		
-		console.log("Para x = ", + x + ", o y vale " + y);
-		
-		c.beginPath();
-		c.arc(x, y, 2, 0, 2*Math.PI);
-		c.fill();
+	c.fillStyle = "blue";
+	
+	function desenhaParabola() {
+		for (var x = 0; x < 600; x = x + 1) {
+			var y = 0.01 * x * x;
+			
+			console.log("Para x = ", + x + ", o y vale " + y);
+			
+			c.beginPath();
+			c.arc(x, 400 - y, 2, 0, 2*Math.PI);
+			c.fill();
+		}
 	}
+	
+	desenhaParabola();
 </script>
