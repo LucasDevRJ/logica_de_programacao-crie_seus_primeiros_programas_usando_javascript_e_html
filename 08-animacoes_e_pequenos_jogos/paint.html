@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+	var tela = document.getElementById("tela");
+	var c = tela.getContext("2d");
+	
+	var corEscolhida;
+	
+	c.fillStyle = "gray";
+	c.fillRect(0, 0, 600, 500);
+	
+	c.fillStyle = "red";
+	c.fillRect(0, 0, 50, 50);
+	
+	c.fillStyle = "blue";
+	c.fillRect(50, 0, 50, 50);
+	
+	c.fillStyle = "yellow";
+	c.fillRect(100, 0, 50, 50);
+		
+	function clicouNoCanvas(evento) {
+		var x = evento.pageX - tela.offsetLeft;
+		var y = evento.pageY - tela.offsetTop;
+		
+		if (x <= 50 && y <= 50) {
+			alert("Vermelho");
+			corEscolhida = "red";
+		} else if ((x > 50 && x < 100) && y <= 50) {
+			alert("Azul");
+			corEscolhida = "blue";
+		} else if ((x > 100 && x < 200) && y <= 50) {
+			alert("Amarelo");
+			corEscolhida = "yellow";
+		}	
+		
+		c.fillStyle = corEscolhida;
+		c.beginPath();
+		c.arc(x, y, 10, 0, 2*3.14);
+		c.fill();
+	
+		console.log("Posição do clique: " + x + ", " + y);
+	}
+
+	tela.onclick = clicouNoCanvas;
+</script>
