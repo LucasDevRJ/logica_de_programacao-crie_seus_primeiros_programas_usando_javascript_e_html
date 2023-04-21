@@ -6,9 +6,17 @@
 	
 	c.fillStyle = "blue";
 	
-	function desenhaParabola() {
+	function funcaoSeno(x) {
+		return Math.sin(x/20) * 100 + 200;
+	}
+	
+	function funcaoQuadratica(x) {
+		return 0.01 * x * x;
+	}
+	
+	function desenhaFuncao(funcaoMatematica) {
 		for (var x = 0; x < 600; x = x + 1) {
-			var y = 0.01 * x * x;
+			var y = 40;
 			
 			console.log("Para x = ", + x + ", o y vale " + y);
 			
@@ -18,5 +26,8 @@
 		}
 	}
 	
-	desenhaParabola();
+	//var y = funcaoMatematica(x);
+	
+	desenhaFuncao(funcaoSeno);
+	//desenhaFuncao(funcaoQuadratica);
 </script>
