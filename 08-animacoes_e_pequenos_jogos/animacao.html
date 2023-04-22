@@ -4,6 +4,7 @@
 <script>
 	var tela = document.getElementById("tela");
 	var c = tela.getContext("2d");
+	var x = 1;
 	
 	c.fillStyle = "green";
 	c.fillRect(0, 0, 200, 400);
@@ -19,8 +20,11 @@
 		c.fillRect(0, 0, 600, 400);
 	}
 	
-	for (var x = 0; x < 600; x = x + 1) {
+	function desenha() {
 		limpaTela();
 		circulo(x, 100, 10);
+		x = x + 1;
 	}
+	
+	setInterval(desenha, 30);
 </script>
