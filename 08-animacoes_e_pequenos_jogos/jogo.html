@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+	var tela = document.getElementById("tela");
+	var c = tela.getContext("2d");
+	var alvoX;
+	var alvoY;
+	
+	
+	c.fillRect(0, 0, 200, 400);
+	
+	function circulo(x, y, raio) {
+		c.strokeStyle = "blue";
+		c.beginPath();
+		c.arc(x, y, x/2, 0, 2*Math.PI);
+		c.stroke();
+	}
+	
+	function limpaTela() {
+		c.fillRect(0, 0, 600, 400);
+	}
+	
+	function desenha() {
+		limpaTela();
+		alvoX = sorteia(600);
+		alvoY = desenhaAlvo(alvoX, alvoY);
+	}
+	
+	function cor(corEscolhida) {
+		c.fillStyle = corEscolhida;
+	}
+	
+	function sorteia(x) {
+		var distancia = tela.onclick - x;
+		
+		if (distancia < 40) {
+			alert("Acertou!!");
+		}
+	}
+	
+	function desenhaAlvo(x, y) {
+		var raio = 40;
+		cor("white");
+		circulo(x, y, raio);
+		cor("red");
+		circulo(x, y, raio-10);
+		cor("white");
+		circulo(x, y, raio-20);
+		cor("red");
+		circulo(x, y, raio-30);
+	}
+	
+	setInterval(desenha, 1000);
+</script>

@@ -5,9 +5,12 @@
 	var tela = document.getElementById("tela");
 	var c = tela.getContext("2d");
 	var x = 1;
+	var imagem = new Image();
+	imagem.src = "casa_do_codigo.png";
 	
 	c.fillStyle = "green";
 	c.fillRect(0, 0, 200, 400);
+	
 	
 	function circulo(x, y, raio) {
 		c.strokeStyle = "blue";
@@ -16,15 +19,21 @@
 		c.stroke();
 	}
 	
+	function desenhaImagem(x, y) {
+		c.drawImage(imagem, x, y);
+	}
+	
 	function limpaTela() {
 		c.fillRect(0, 0, 600, 400);
 	}
 	
+
 	function desenha() {
 		limpaTela();
-		circulo(x, 100, 10);
+		circulo(x, x, 10);
 		x = x + 1;
 	}
 	
 	setInterval(desenha, 30);
+	//desenhaImagem(x, 100);
 </script>
