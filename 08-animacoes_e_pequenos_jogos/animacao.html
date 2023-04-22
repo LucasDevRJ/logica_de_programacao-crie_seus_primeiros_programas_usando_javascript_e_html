@@ -10,10 +10,10 @@
 	c.fillRect(0, 0, 200, 400);
 	
 	function circulo(x, y, raio) {
-		c.fillStyle = "blue";
+		c.strokeStyle = "blue";
 		c.beginPath();
-		c.arc(x, y, raio, 0, 2*Math.PI);
-		c.fill();
+		c.arc(x, y, x/2, 0, 2*Math.PI);
+		c.stroke();
 	}
 	
 	function limpaTela() {
