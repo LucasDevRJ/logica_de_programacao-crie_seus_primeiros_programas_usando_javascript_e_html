@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+	var tela = document.getElementById("tela");
+	var c = tela.getContext("2d");
+	
+	c.fillStyle = "green";
+	c.fillRect(0, 0, 200, 400);
+	
+	function circulo(x, y, raio) {
+		c.fillStyle = "blue";
+		c.beginPath();
+		c.arc(x, y, raio, 0, 2*Math.PI);
+		c.fill();
+	}
+	
+	function limpaTela() {
+		c.fillRect(0, 0, 600, 400);
+	}
+	
+	for (var x = 0; x < 600; x = x + 1) {
+		limpaTela();
+		circulo(x, 100, 10);
+	}
+</script>
